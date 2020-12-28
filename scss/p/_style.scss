@@ -1,3 +1,180 @@
-body {
-	font-size: 100%;
+$bgdark: #0e1621;
+$bg: #17212b;
+$bgdarker: mix($bgdark, #000, 80%);
+$bglight: #242f3d;
+$border: #101921;
+$button: #2e70a5;
+$text: #fff;
+$textlight: #7f92a4;
+$textblue: #73bbf5;
+
+$hint: #6c7883;
+
+html,
+body,
+.bt-layer-content {
+	background: $bgdark;
+}
+
+header,
+.bt-layer-block + .bt-layer-block::before {
+	background: $bg;
+}
+
+a.bt-card-row:hover {
+	background: $bg;
+}
+
+header.sticky .sticky-box,
+header .header-wrap {
+	background: $bg;
+}
+
+// .thumb-color3 {
+// 	background-color: rgba(#76c84d, 50%);
+// }
+
+.bt-card-thumb:not(.thumb-icon) {
+	background-color: $bgdark;
+}
+
+.thumb-color0 {
+	// background-color: #e56555;
+	background-color: #c65345;
+}
+.thumb-color1 {
+	// background-color: #f28c48;
+	background-color: #d06e2d;
+}
+.thumb-color2 {
+	// background-color: #8e85ee;
+	background-color: #564ea8;
+}
+.thumb-color3 {
+	// background-color: #76c84d;
+	background-color: #3d6a26;
+}
+.thumb-color4 {
+	// background-color: #5fbed5;
+	background-color: #0f4957;
+}
+.thumb-color5 {
+	// background-color: #549cdd;
+	background-color: #477aa8;
+}
+.thumb-color6 {
+	// background-color: #f2749a;
+	background-color: #b55773;
+}
+.thumb-color7 {
+	// background-color: #ebb136;
+	background-color: #b3861e;
+}
+
+.bt-card-thumb-status {
+	border-top: 2px solid $bgdark;
+	background: #2c6c29;
+}
+
+body,
+.bt-card-title {
+	color: $text;
+}
+
+.bt-card-preview {
+	color: mix($text, $bgdark, 75%);
+}
+
+.bt-issue-footer,
+.cd-issue-like,
+.cd-issue-dislike,
+.cd-issue-replies,
+.bt-issue-subscribe,
+.bt-issue-trending,
+.bt-issue-actions .bt-issue-copy-link {
+	color: $textlight;
+}
+
+.cd-issue-like .icon use,
+.cd-issue-dislike .icon use,
+.cd-issue-replies .icon use,
+.bt-issue-subscribe .icon use,
+.bt-issue-trending .icon use,
+.bt-issue-actions .bt-issue-copy-link .icon use {
+	fill: $textlight;
+}
+
+.select,
+.bt-main-search-form .select {
+	background-color: $bglight;
+	box-shadow: inset 0 0 0 1px $bglight;
+}
+
+.select .items-list {
+	background: $bgdarker;
+}
+
+// .bt-select-query .select .search-item .select-list-item {
+// 	background-color: $bglight;
+// 	color: $textlight;
+// }
+
+// .bt-select-query .select .search-item.selected .select-list-item {
+// 	background-color: mix($bglight);
+// }
+
+// .bt-select-query .select .search-item.selected .select-list-item.c-orange {
+// }
+
+.bt-select-query .select .search-item {
+	$open: #42b5f9;
+	$closed: #e67d2f;
+	$coming: #9abf40;
+	$fixed: #53c147;
+	$regular: $textlight;
+
+	.select-list-item.c-cyan,
+	.select-list-item.internal {
+		color: $open;
+		background-color: mix($open, $bgdarker, 15%);
+	}
+	.select-list-item.c-orange {
+		color: $closed;
+		background-color: mix($closed, $bgdarker, 15%);
+	}
+	.select-list-item.c-lightgreen {
+		color: $coming;
+		background-color: mix($coming, $bgdarker, 15%);
+	}
+	.select-list-item.private,
+	.select-list-item.c-green {
+		color: $fixed;
+		background-color: mix($fixed, $bgdarker, 15%);
+	}
+
+	.select-list-item {
+		color: $regular;
+		background-color: mix($regular, $bgdarker, 15%);
+	}
+
+	&.selected {
+		.select-list-item.c-cyan,
+		.select-list-item.internal {
+			background-color: mix($open, $bgdarker, 35%);
+		}
+		.select-list-item.c-orange {
+			background-color: mix($closed, $bgdarker, 35%);
+		}
+		.select-list-item.c-lightgreen {
+			background-color: mix($coming, $bgdarker, 35%);
+		}
+		.select-list-item.private,
+		.select-list-item.c-green {
+			background-color: mix($fixed, $bgdarker, 35%);
+		}
+
+		.select-list-item {
+			background-color: mix($regular, $bgdarker, 30%);
+		}
+	}
 }
