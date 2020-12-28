@@ -1,0 +1,16 @@
+@import "p/vars";
+
+/* ==UserStyle==
+@name         #{$s_name}
+@version      #{$s_ver}
+@description  #{$s_desc}
+@namespace    https://github.com/dotvhs/#{$s_space}
+@author       dotvhs
+@homepageURL  https://github.com/dotvhs/#{$s_space}
+@supportURL   https://github.com/dotvhs/#{$s_space}/issues
+@license      CC-BY-SA-4.0
+==/UserStyle== */
+
+@-moz-document domain("#{$s_domain}") {
+	@import "p/style";
+}

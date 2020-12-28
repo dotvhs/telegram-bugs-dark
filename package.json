@@ -1,0 +1,25 @@
+{
+  "name": "usercss-template",
+  "version": "1.0.0",
+  "description": "A template I'm using for my UserCSS styles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "usercss",
+    "template",
+    "stylus"
+  ],
+  "author": "dotvhs",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0"
+  }
+}
