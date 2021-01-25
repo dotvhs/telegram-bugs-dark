@@ -1,0 +1,281 @@
+/* ==UserStyle==
+@name         Telegram Bugs Dark
+@version      1.0.0
+@description  A dark theme for bugs.telegram.org
+@namespace    https://github.com/dotvhs/telegram-bugs-dark
+@author       dotvhs
+@homepageURL  https://github.com/dotvhs/telegram-bugs-dark
+@supportURL   https://github.com/dotvhs/telegram-bugs-dark/issues
+@license      CC-BY-SA-4.0
+==/UserStyle== */
+@-moz-document domain("bugs.telegram.org") {
+  html,
+  body,
+  .bt-layer-content {
+    background: #0e1621; }
+  a,
+  a:hover {
+    color: #73bbf5; }
+  header,
+  .bt-layer-block + .bt-layer-block::before {
+    background: #17212b; }
+  a.bt-card-row:hover {
+    background: #17212b; }
+  header.sticky .sticky-box,
+  header .header-wrap {
+    background: #17212b; }
+  .bt-card-thumb:not(.thumb-icon) {
+    background-color: #0e1621; }
+  .thumb-color0 {
+    background-color: #c65345; }
+  .thumb-color1 {
+    background-color: #d06e2d; }
+  .thumb-color2 {
+    background-color: #564ea8; }
+  .thumb-color3 {
+    background-color: #3d6a26; }
+  .thumb-color4 {
+    background-color: #0f4957; }
+  .thumb-color5 {
+    background-color: #477aa8; }
+  .thumb-color6 {
+    background-color: #b55773; }
+  .thumb-color7 {
+    background-color: #b3861e; }
+  .bt-card-thumb-status {
+    border-top: 2px solid #0e1621;
+    background: #2c6c29; }
+  body,
+  .bt-card-title,
+  .bt-issue-title .cd-author,
+  .bt-comment-author {
+    color: #e3e4e6; }
+  .form-control {
+    color: #e3e4e6; }
+    .form-control::placeholder {
+      color: #6c7883; }
+    .form-control:focus::placeholder {
+      color: #4a535f; }
+  .input.empty[data-placeholder]::before {
+    color: #6c7883; }
+  .input.empty[data-placeholder]:focus::before {
+    color: #4a535f; }
+  a.bt-comment-reply-content .bt-comment-head {
+    color: #73bbf5; }
+  .bt-card-preview,
+  a.bt-comment-reply-content {
+    color: #aeb1b5; }
+  .bt-comment-reply-content::before {
+    border-color: #73bbf5; }
+  .bt-issue-footer,
+  .cd-issue-like,
+  .cd-issue-dislike,
+  .cd-issue-replies,
+  .bt-issue-subscribe,
+  .bt-issue-trending,
+  .bt-issue-actions .bt-issue-copy-link {
+    color: #7f92a4; }
+  .cd-issue-like .icon use,
+  .cd-issue-dislike .icon use,
+  .cd-issue-replies .icon use,
+  .bt-issue-subscribe .icon use,
+  .bt-issue-trending .icon use,
+  .bt-issue-actions .bt-issue-copy-link .icon use {
+    fill: #7f92a4; }
+  .select,
+  .bt-main-search-form .select {
+    background-color: #242f3d;
+    box-shadow: inset 0 0 0 1px #242f3d; }
+  input.cd-form-control,
+  textarea.cd-form-control,
+  .input.cd-form-control {
+    box-shadow: inset 0 -1px 0 #242f3d; }
+  .cd-comment-input-wrap .input.cd-comment-input {
+    border-color: #242f3d; }
+  .select .items-list {
+    background: #0b121a; }
+  .bt-comments-more {
+    background-color: #17212b;
+    color: #7f92a4; }
+    .bt-comments-more:hover {
+      background-color: #242f3d; }
+  .bt-sort-item.selected,
+  .bt-sort-item.selected:hover {
+    color: #e3e4e6; }
+  .bt-layer-close:hover,
+  .bt-menu-btn.dropdown-toggle:hover,
+  .open .bt-menu-btn.dropdown-toggle,
+  .bt-action-btn.bt-reply-btn:hover,
+  .bt-action-btn.bt-action-menu-btn:hover {
+    background-color: #17212b; }
+  .dropdown-menu {
+    background-color: #17212b; }
+  .bt-dropdown-wrap span.dropdown-menu {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+  .bt-dropdown-wrap ul.dropdown-menu > li > .bt-dropdown-item {
+    color: #c8cbce; }
+  .bt-dropdown-wrap ul.dropdown-menu > li > a.bt-dropdown-item:hover,
+  .bt-dropdown-wrap ul.dropdown-menu > li > a.bt-dropdown-item:focus {
+    background-color: #242f3d;
+    color: #e3e4e6; }
+  .bt-select-query .select .search-item .select-list-item {
+    color: #7f92a4;
+    background-color: #1c252f; }
+    .bt-select-query .select .search-item .select-list-item.c-cyan, .bt-select-query .select .search-item .select-list-item.internal {
+      color: #42b5f9;
+      background-color: #132a3b; }
+    .bt-select-query .select .search-item .select-list-item.c-orange {
+      color: #e67d2f;
+      background-color: #2c221d; }
+    .bt-select-query .select .search-item .select-list-item.c-lightgreen {
+      color: #9abf40;
+      background-color: #202c20; }
+    .bt-select-query .select .search-item .select-list-item.private, .bt-select-query .select .search-item .select-list-item.c-green {
+      color: #53c147;
+      background-color: #162c21; }
+  .bt-select-query .select .search-item.selected .select-list-item.c-cyan,
+  .bt-select-query .select .search-item.selected .select-list-item.internal {
+    background-color: #1e4b68; }
+  .bt-select-query .select .search-item.selected .select-list-item.c-orange {
+    background-color: #583721; }
+  .bt-select-query .select .search-item.selected .select-list-item.c-lightgreen {
+    background-color: #3d4f27; }
+  .bt-select-query .select .search-item.selected .select-list-item.private,
+  .bt-select-query .select .search-item.selected .select-list-item.c-green {
+    background-color: #244f2a; }
+  .bt-select-query .select .search-item.selected .select-list-item {
+    background-color: #2e3843; }
+  .bt-select-query .select .selected-item.c-orange {
+    background-color: #c66120; }
+  .bt-select-query .select .selected-item.c-lightgreen {
+    background-color: #638839; }
+  .bt-comment-service-text,
+  .bt-issue-tags .bt-status,
+  .bt-issue-tags .bt-tag,
+  .bt-subscription-tags .bt-status,
+  .bt-card-action .bt-status {
+    color: #7f92a4;
+    background-color: #1c252f; }
+    .bt-comment-service-text.c-cyan, .bt-comment-service-text.internal,
+    .bt-issue-tags .bt-status.c-cyan,
+    .bt-issue-tags .bt-status.internal,
+    .bt-issue-tags .bt-tag.c-cyan,
+    .bt-issue-tags .bt-tag.internal,
+    .bt-subscription-tags .bt-status.c-cyan,
+    .bt-subscription-tags .bt-status.internal,
+    .bt-card-action .bt-status.c-cyan,
+    .bt-card-action .bt-status.internal {
+      color: #42b5f9;
+      background-color: #132a3b; }
+    .bt-comment-service-text.c-orange,
+    .bt-issue-tags .bt-status.c-orange,
+    .bt-issue-tags .bt-tag.c-orange,
+    .bt-subscription-tags .bt-status.c-orange,
+    .bt-card-action .bt-status.c-orange {
+      color: #e67d2f;
+      background-color: #2c221d; }
+    .bt-comment-service-text.c-lightgreen,
+    .bt-issue-tags .bt-status.c-lightgreen,
+    .bt-issue-tags .bt-tag.c-lightgreen,
+    .bt-subscription-tags .bt-status.c-lightgreen,
+    .bt-card-action .bt-status.c-lightgreen {
+      color: #9abf40;
+      background-color: #202c20; }
+    .bt-comment-service-text.private, .bt-comment-service-text.c-green,
+    .bt-issue-tags .bt-status.private,
+    .bt-issue-tags .bt-status.c-green,
+    .bt-issue-tags .bt-tag.private,
+    .bt-issue-tags .bt-tag.c-green,
+    .bt-subscription-tags .bt-status.private,
+    .bt-subscription-tags .bt-status.c-green,
+    .bt-card-action .bt-status.private,
+    .bt-card-action .bt-status.c-green {
+      color: #53c147;
+      background-color: #162c21; }
+    .bt-comment-service-text .select-list-item,
+    .bt-issue-tags .bt-status .select-list-item,
+    .bt-issue-tags .bt-tag .select-list-item,
+    .bt-subscription-tags .bt-status .select-list-item,
+    .bt-card-action .bt-status .select-list-item {
+      color: #7f92a4;
+      background-color: #1c252f; }
+      .bt-comment-service-text .select-list-item.c-cyan, .bt-comment-service-text .select-list-item.internal,
+      .bt-issue-tags .bt-status .select-list-item.c-cyan,
+      .bt-issue-tags .bt-status .select-list-item.internal,
+      .bt-issue-tags .bt-tag .select-list-item.c-cyan,
+      .bt-issue-tags .bt-tag .select-list-item.internal,
+      .bt-subscription-tags .bt-status .select-list-item.c-cyan,
+      .bt-subscription-tags .bt-status .select-list-item.internal,
+      .bt-card-action .bt-status .select-list-item.c-cyan,
+      .bt-card-action .bt-status .select-list-item.internal {
+        color: #42b5f9;
+        background-color: #132a3b; }
+      .bt-comment-service-text .select-list-item.c-orange,
+      .bt-issue-tags .bt-status .select-list-item.c-orange,
+      .bt-issue-tags .bt-tag .select-list-item.c-orange,
+      .bt-subscription-tags .bt-status .select-list-item.c-orange,
+      .bt-card-action .bt-status .select-list-item.c-orange {
+        color: #e67d2f;
+        background-color: #2c221d; }
+      .bt-comment-service-text .select-list-item.c-lightgreen,
+      .bt-issue-tags .bt-status .select-list-item.c-lightgreen,
+      .bt-issue-tags .bt-tag .select-list-item.c-lightgreen,
+      .bt-subscription-tags .bt-status .select-list-item.c-lightgreen,
+      .bt-card-action .bt-status .select-list-item.c-lightgreen {
+        color: #9abf40;
+        background-color: #202c20; }
+      .bt-comment-service-text .select-list-item.private, .bt-comment-service-text .select-list-item.c-green,
+      .bt-issue-tags .bt-status .select-list-item.private,
+      .bt-issue-tags .bt-status .select-list-item.c-green,
+      .bt-issue-tags .bt-tag .select-list-item.private,
+      .bt-issue-tags .bt-tag .select-list-item.c-green,
+      .bt-subscription-tags .bt-status .select-list-item.private,
+      .bt-subscription-tags .bt-status .select-list-item.c-green,
+      .bt-card-action .bt-status .select-list-item.private,
+      .bt-card-action .bt-status .select-list-item.c-green {
+        color: #53c147;
+        background-color: #162c21; }
+  .bt-issue-cover {
+    background: #0b121a; }
+  .bt-markdown pre,
+  .bt-markdown code {
+    background: #242f3d;
+    color: #93a2b1; }
+  .bt-markdown hr {
+    border-color: #364352; }
+  .popup {
+    background: #17212b; }
+  .toast-container .toast {
+    background-color: rgba(11, 18, 26, 0.9); }
+  .btn-link {
+    color: #73bbf5; }
+  .popup-buttons .btn-link:hover {
+    background: #242f3d;
+    color: #73bbf5; }
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-default:active,
+  .open > .dropdown-toggle.btn-default {
+    background: #17212b; }
+  .bt-comment-photo {
+    background: #17212b; }
+    .bt-comment-photo .photo-char {
+      color: #7f92a4; }
+  .bt-action-btn.bt-reply-btn .icon use {
+    fill: #7f92a4; }
+  .bt-issue-actions a.bt-issue-copy-link:hover,
+  .bot-report .bt-comment-author-name.cd-bot {
+    color: #7f92a4; }
+  .bot-feature .bt-comment-author-name.cd-bot {
+    color: #53c147; }
+  .cd-dialog-options .radio-item .radio-input + .radio-label {
+    color: #b6b9bd; }
+  .cd-dialog-options.disabled input.radio:disabled ~ .radio-label {
+    color: #404850; }
+  .cd-dialog-options.disabled input.radio:checked ~ .radio-label {
+    color: #73bbf5; }
+  .cd-issue-file-title {
+    color: #bcd6eb; }
+  .close:hover::before,
+  .close:hover::after {
+    background: #e3e4e6; } }

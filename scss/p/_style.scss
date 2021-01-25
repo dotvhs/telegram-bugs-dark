@@ -4,7 +4,7 @@ $bgdarker: mix($bgdark, #000, 80%);
 $bglight: #242f3d;
 $border: #101921;
 $button: #2e70a5;
-$text: #fff;
+$text: mix(#fff, $bglight, 87%);
 $textlight: #7f92a4;
 $textblue: #73bbf5;
 
@@ -14,6 +14,11 @@ html,
 body,
 .bt-layer-content {
 	background: $bgdark;
+}
+
+a,
+a:hover {
+	color: $textblue;
 }
 
 header,
@@ -77,12 +82,41 @@ header .header-wrap {
 }
 
 body,
-.bt-card-title {
+.bt-card-title,
+.bt-issue-title .cd-author,
+.bt-comment-author {
 	color: $text;
 }
 
-.bt-card-preview {
+.form-control {
+	color: $text;
+	&::placeholder {
+		color: $hint;
+	}
+	&:focus::placeholder {
+		color: mix($text, $bglight, 20%);
+	}
+}
+
+.input.empty[data-placeholder]::before {
+	color: $hint;
+}
+
+.input.empty[data-placeholder]:focus::before {
+	color: mix($text, $bglight, 20%);
+}
+
+a.bt-comment-reply-content .bt-comment-head {
+	color: $textblue;
+}
+
+.bt-card-preview,
+a.bt-comment-reply-content {
 	color: mix($text, $bgdark, 75%);
+}
+
+.bt-comment-reply-content::before {
+	border-color: $textblue;
 }
 
 .bt-issue-footer,
@@ -110,51 +144,95 @@ body,
 	box-shadow: inset 0 0 0 1px $bglight;
 }
 
+input.cd-form-control,
+textarea.cd-form-control,
+.input.cd-form-control {
+	box-shadow: inset 0 -1px 0 $bglight;
+}
+
+.cd-comment-input-wrap .input.cd-comment-input {
+	border-color: $bglight;
+}
+
 .select .items-list {
 	background: $bgdarker;
 }
 
-// .bt-select-query .select .search-item .select-list-item {
-// 	background-color: $bglight;
-// 	color: $textlight;
-// }
+.bt-comments-more {
+	background-color: $bg;
+	color: $textlight;
+	&:hover {
+		background-color: $bglight;
+	}
+}
 
-// .bt-select-query .select .search-item.selected .select-list-item {
-// 	background-color: mix($bglight);
-// }
+.bt-sort-item.selected,
+.bt-sort-item.selected:hover {
+	color: $text;
+}
 
-// .bt-select-query .select .search-item.selected .select-list-item.c-orange {
-// }
+.bt-layer-close:hover,
+.bt-menu-btn.dropdown-toggle:hover,
+.open .bt-menu-btn.dropdown-toggle,
+.bt-action-btn.bt-reply-btn:hover,
+.bt-action-btn.bt-action-menu-btn:hover {
+	background-color: $bg;
+}
 
-.bt-select-query .select .search-item {
-	$open: #42b5f9;
-	$closed: #e67d2f;
-	$coming: #9abf40;
-	$fixed: #53c147;
-	$regular: $textlight;
+.dropdown-menu {
+	background-color: $bg;
+}
 
-	.select-list-item.c-cyan,
-	.select-list-item.internal {
+.bt-dropdown-wrap span.dropdown-menu {
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bt-dropdown-wrap ul.dropdown-menu > li > .bt-dropdown-item {
+	color: mix($text, $bg, 87%);
+}
+
+.bt-dropdown-wrap ul.dropdown-menu > li > a.bt-dropdown-item:hover,
+.bt-dropdown-wrap ul.dropdown-menu > li > a.bt-dropdown-item:focus {
+	background-color: $bglight;
+	color: $text;
+}
+
+$open: #42b5f9;
+$closed: #e67d2f;
+$coming: #9abf40;
+$fixed: #53c147;
+$regular: $textlight;
+
+@mixin pill-regular {
+	color: $regular;
+	background-color: mix($regular, $bgdarker, 15%);
+}
+
+@mixin pill-colors {
+	&.c-cyan,
+	&.internal {
 		color: $open;
 		background-color: mix($open, $bgdarker, 15%);
 	}
-	.select-list-item.c-orange {
+	&.c-orange {
 		color: $closed;
 		background-color: mix($closed, $bgdarker, 15%);
 	}
-	.select-list-item.c-lightgreen {
+	&.c-lightgreen {
 		color: $coming;
 		background-color: mix($coming, $bgdarker, 15%);
 	}
-	.select-list-item.private,
-	.select-list-item.c-green {
+	&.private,
+	&.c-green {
 		color: $fixed;
 		background-color: mix($fixed, $bgdarker, 15%);
 	}
+}
 
+.bt-select-query .select .search-item {
 	.select-list-item {
-		color: $regular;
-		background-color: mix($regular, $bgdarker, 15%);
+		@include pill-regular;
+		@include pill-colors;
 	}
 
 	&.selected {
@@ -177,4 +255,106 @@ body,
 			background-color: mix($regular, $bgdarker, 30%);
 		}
 	}
+}
+
+.bt-select-query .select .selected-item {
+	&.c-orange {
+		background-color: #c66120;
+	}
+	&.c-lightgreen {
+		background-color: #638839;
+	}
+}
+
+.bt-comment-service-text,
+.bt-issue-tags .bt-status,
+.bt-issue-tags .bt-tag,
+.bt-subscription-tags .bt-status,
+.bt-card-action .bt-status {
+	@include pill-regular;
+	@include pill-colors;
+
+	.select-list-item {
+		@include pill-regular;
+		@include pill-colors;
+	}
+}
+
+.bt-issue-cover {
+	background: $bgdarker;
+}
+
+.bt-markdown pre,
+.bt-markdown code {
+	background: $bglight;
+	color: mix($textlight, $text, 80%);
+}
+
+.bt-markdown hr {
+	border-color: mix($bglight, $textlight, 80%);
+}
+
+.popup {
+	background: $bg;
+}
+
+.toast-container .toast {
+	background-color: rgba($bgdarker, 0.9);
+}
+
+.btn-link {
+	color: $textblue;
+}
+
+.popup-buttons .btn-link:hover {
+	background: $bglight;
+	color: $textblue;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.open > .dropdown-toggle.btn-default {
+	background: $bg;
+}
+
+.bt-comment-photo {
+	background: $bg;
+	.photo-char {
+		color: $textlight;
+	}
+}
+
+.bt-action-btn.bt-reply-btn .icon use {
+	fill: $textlight;
+}
+
+.bt-issue-actions a.bt-issue-copy-link:hover,
+.bot-report .bt-comment-author-name.cd-bot {
+	color: $textlight;
+}
+
+.bot-feature .bt-comment-author-name.cd-bot {
+	color: #53c147;
+}
+
+.cd-dialog-options .radio-item .radio-input + .radio-label {
+	color: mix($text, $bg, 78%);
+}
+
+.cd-dialog-options.disabled input.radio:disabled ~ .radio-label {
+	color: mix($text, $bg, 20%);
+}
+
+.cd-dialog-options.disabled input.radio:checked ~ .radio-label {
+	color: $textblue;
+}
+
+.cd-issue-file-title {
+	color: mix($text, $textblue, 65%);
+}
+
+.close:hover::before,
+.close:hover::after {
+	background: $text;
 }
