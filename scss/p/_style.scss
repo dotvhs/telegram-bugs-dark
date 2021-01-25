@@ -168,6 +168,10 @@ textarea.cd-form-control,
 	}
 }
 
+.bt-comment.highlight {
+	background: $bglight;
+}
+
 .bt-sort-item.selected,
 .bt-sort-item.selected:hover {
 	color: $text;
@@ -177,12 +181,17 @@ textarea.cd-form-control,
 .bt-menu-btn.dropdown-toggle:hover,
 .open .bt-menu-btn.dropdown-toggle,
 .bt-action-btn.bt-reply-btn:hover,
-.bt-action-btn.bt-action-menu-btn:hover {
+.bt-action-btn.bt-action-menu-btn:hover,
+.bt-subscription-delete-btn:hover {
 	background-color: $bg;
 }
 
 .dropdown-menu {
 	background-color: $bg;
+
+	li.divider {
+		background-color: mix($bglight, $textlight, 80%);
+	}
 }
 
 .bt-dropdown-wrap span.dropdown-menu {
@@ -199,7 +208,7 @@ textarea.cd-form-control,
 	color: $text;
 }
 
-$open: #42b5f9;
+$open: #42cef9;
 $aqua: #2fffeb;
 $closed: #e67d2f;
 $coming: #9abf40;
@@ -207,7 +216,7 @@ $fixed: #53c147;
 $team: #ffc964;
 $pink: #dd5b7f;
 $violet: #c285ff;
-$blue: #568eff;
+$blue: #789aff;
 $regular: $textlight;
 
 @mixin pill-regular {
@@ -223,8 +232,7 @@ $regular: $textlight;
 			fill: $aqua;
 		}
 	}
-	&.c-cyan,
-	&.internal {
+	&.c-cyan {
 		color: $open;
 		background-color: mix($open, $bgdarker, 15%);
 		&.bt-dropdown .dd use {
@@ -245,7 +253,6 @@ $regular: $textlight;
 			fill: $coming;
 		}
 	}
-	&.private,
 	&.c-green {
 		color: $fixed;
 		background-color: mix($fixed, $bgdarker, 15%);
@@ -294,8 +301,7 @@ $regular: $textlight;
 			&.c-aqua {
 				background-color: mix($aqua, $bgdarker, 35%);
 			}
-			&.c-cyan,
-			&.internal {
+			&.c-cyan {
 				background-color: mix($open, $bgdarker, 35%);
 			}
 			&.c-orange {
@@ -304,9 +310,11 @@ $regular: $textlight;
 			&.c-lightgreen {
 				background-color: mix($coming, $bgdarker, 35%);
 			}
-			&.private,
 			&.c-green {
 				background-color: mix($fixed, $bgdarker, 35%);
+			}
+			&.c-blue {
+				background-color: mix($blue, $bgdarker, 35%);
 			}
 			&.c-pink {
 				background-color: mix($pink, $bgdarker, 35%);
@@ -380,6 +388,13 @@ $regular: $textlight;
 	color: $textblue;
 }
 
+.bt-attach-btn-wrap .bt-attach-btn {
+	background: $bg;
+	&:hover {
+		background: $bglight;
+	}
+}
+
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
@@ -426,4 +441,38 @@ $regular: $textlight;
 .close:hover::before,
 .close:hover::after {
 	background: $text;
+}
+
+.bt-markdown-input > .CodeMirror {
+	color: $text;
+}
+
+.CodeMirror {
+	background: $bgdark;
+}
+
+.CodeMirror-cursor {
+	border-left: 2px solid $button;
+}
+
+.bt-markdown-input > .CodeMirror {
+	box-shadow: inset 0 -1px 0 $bglight;
+}
+
+.bt-markdown-input > .CodeMirror-focused {
+	box-shadow: inset 0 -2px 0 #39ade7;
+}
+
+.bt-markdown-input .cm-s-default {
+	.cm-comment {
+		color: $textlight;
+	}
+	.cm-link {
+		color: $textblue;
+	}
+}
+
+.bt-card-action mark.highlight,
+.bt-card-row-body mark.highlight {
+	background: #5e4703;
 }
