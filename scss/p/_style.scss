@@ -84,7 +84,9 @@ header .header-wrap {
 body,
 .bt-card-title,
 .bt-issue-title .cd-author,
-.bt-comment-author {
+.bt-comment-author,
+header .breadcrumb > .active,
+header .breadcrumb > .active a {
 	color: $text;
 }
 
@@ -198,9 +200,14 @@ textarea.cd-form-control,
 }
 
 $open: #42b5f9;
+$aqua: #2fffeb;
 $closed: #e67d2f;
 $coming: #9abf40;
 $fixed: #53c147;
+$team: #ffc964;
+$pink: #dd5b7f;
+$violet: #c285ff;
+$blue: #568eff;
 $regular: $textlight;
 
 @mixin pill-regular {
@@ -209,23 +216,70 @@ $regular: $textlight;
 }
 
 @mixin pill-colors {
+	&.c-aqua {
+		color: $aqua;
+		background-color: mix($aqua, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $aqua;
+		}
+	}
 	&.c-cyan,
 	&.internal {
 		color: $open;
 		background-color: mix($open, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $open;
+		}
 	}
 	&.c-orange {
 		color: $closed;
 		background-color: mix($closed, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $closed;
+		}
 	}
 	&.c-lightgreen {
 		color: $coming;
 		background-color: mix($coming, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $coming;
+		}
 	}
 	&.private,
 	&.c-green {
 		color: $fixed;
 		background-color: mix($fixed, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $fixed;
+		}
+	}
+	&.c-pink {
+		color: $pink;
+		background-color: mix($pink, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $pink;
+		}
+	}
+	&.c-blue {
+		color: $blue;
+		background-color: mix($blue, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $blue;
+		}
+	}
+	&.c-violet {
+		color: $violet;
+		background-color: mix($violet, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $violet;
+		}
+	}
+	&.team {
+		color: $team;
+		background-color: mix($team, $bgdarker, 15%);
+		&.bt-dropdown .dd use {
+			fill: $team;
+		}
 	}
 }
 
@@ -236,22 +290,34 @@ $regular: $textlight;
 	}
 
 	&.selected {
-		.select-list-item.c-cyan,
-		.select-list-item.internal {
-			background-color: mix($open, $bgdarker, 35%);
-		}
-		.select-list-item.c-orange {
-			background-color: mix($closed, $bgdarker, 35%);
-		}
-		.select-list-item.c-lightgreen {
-			background-color: mix($coming, $bgdarker, 35%);
-		}
-		.select-list-item.private,
-		.select-list-item.c-green {
-			background-color: mix($fixed, $bgdarker, 35%);
-		}
-
 		.select-list-item {
+			&.c-aqua {
+				background-color: mix($aqua, $bgdarker, 35%);
+			}
+			&.c-cyan,
+			&.internal {
+				background-color: mix($open, $bgdarker, 35%);
+			}
+			&.c-orange {
+				background-color: mix($closed, $bgdarker, 35%);
+			}
+			&.c-lightgreen {
+				background-color: mix($coming, $bgdarker, 35%);
+			}
+			&.private,
+			&.c-green {
+				background-color: mix($fixed, $bgdarker, 35%);
+			}
+			&.c-pink {
+				background-color: mix($pink, $bgdarker, 35%);
+			}
+			&.c-violet {
+				background-color: mix($violet, $bgdarker, 35%);
+			}
+			&.team {
+				background-color: mix($team, $bgdarker, 35%);
+			}
+
 			background-color: mix($regular, $bgdarker, 30%);
 		}
 	}
@@ -263,6 +329,9 @@ $regular: $textlight;
 	}
 	&.c-lightgreen {
 		background-color: #638839;
+	}
+	&.c-pink {
+		background-color: #a44d67;
 	}
 }
 

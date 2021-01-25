@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Telegram Bugs Dark
-@version      1.0.0
+@version      1.0.1
 @description  A dark theme for bugs.telegram.org
 @namespace    https://github.com/dotvhs/telegram-bugs-dark
 @author       dotvhs
@@ -48,7 +48,9 @@
   body,
   .bt-card-title,
   .bt-issue-title .cd-author,
-  .bt-comment-author {
+  .bt-comment-author,
+  header .breadcrumb > .active,
+  header .breadcrumb > .active a {
     color: #e3e4e6; }
   .form-control {
     color: #e3e4e6; }
@@ -121,34 +123,75 @@
   .bt-select-query .select .search-item .select-list-item {
     color: #7f92a4;
     background-color: #1c252f; }
+    .bt-select-query .select .search-item .select-list-item.c-aqua {
+      color: #2fffeb;
+      background-color: #103639; }
+      .bt-select-query .select .search-item .select-list-item.c-aqua.bt-dropdown .dd use {
+        fill: #2fffeb; }
     .bt-select-query .select .search-item .select-list-item.c-cyan, .bt-select-query .select .search-item .select-list-item.internal {
       color: #42b5f9;
       background-color: #132a3b; }
+      .bt-select-query .select .search-item .select-list-item.c-cyan.bt-dropdown .dd use, .bt-select-query .select .search-item .select-list-item.internal.bt-dropdown .dd use {
+        fill: #42b5f9; }
     .bt-select-query .select .search-item .select-list-item.c-orange {
       color: #e67d2f;
       background-color: #2c221d; }
+      .bt-select-query .select .search-item .select-list-item.c-orange.bt-dropdown .dd use {
+        fill: #e67d2f; }
     .bt-select-query .select .search-item .select-list-item.c-lightgreen {
       color: #9abf40;
       background-color: #202c20; }
+      .bt-select-query .select .search-item .select-list-item.c-lightgreen.bt-dropdown .dd use {
+        fill: #9abf40; }
     .bt-select-query .select .search-item .select-list-item.private, .bt-select-query .select .search-item .select-list-item.c-green {
       color: #53c147;
       background-color: #162c21; }
-  .bt-select-query .select .search-item.selected .select-list-item.c-cyan,
-  .bt-select-query .select .search-item.selected .select-list-item.internal {
-    background-color: #1e4b68; }
-  .bt-select-query .select .search-item.selected .select-list-item.c-orange {
-    background-color: #583721; }
-  .bt-select-query .select .search-item.selected .select-list-item.c-lightgreen {
-    background-color: #3d4f27; }
-  .bt-select-query .select .search-item.selected .select-list-item.private,
-  .bt-select-query .select .search-item.selected .select-list-item.c-green {
-    background-color: #244f2a; }
+      .bt-select-query .select .search-item .select-list-item.private.bt-dropdown .dd use, .bt-select-query .select .search-item .select-list-item.c-green.bt-dropdown .dd use {
+        fill: #53c147; }
+    .bt-select-query .select .search-item .select-list-item.c-pink {
+      color: #dd5b7f;
+      background-color: #2b1d29; }
+      .bt-select-query .select .search-item .select-list-item.c-pink.bt-dropdown .dd use {
+        fill: #dd5b7f; }
+    .bt-select-query .select .search-item .select-list-item.c-blue {
+      color: #568eff;
+      background-color: #16253c; }
+      .bt-select-query .select .search-item .select-list-item.c-blue.bt-dropdown .dd use {
+        fill: #568eff; }
+    .bt-select-query .select .search-item .select-list-item.c-violet {
+      color: #c285ff;
+      background-color: #26233c; }
+      .bt-select-query .select .search-item .select-list-item.c-violet.bt-dropdown .dd use {
+        fill: #c285ff; }
+    .bt-select-query .select .search-item .select-list-item.team {
+      color: #ffc964;
+      background-color: #302d25; }
+      .bt-select-query .select .search-item .select-list-item.team.bt-dropdown .dd use {
+        fill: #ffc964; }
   .bt-select-query .select .search-item.selected .select-list-item {
     background-color: #2e3843; }
+    .bt-select-query .select .search-item.selected .select-list-item.c-aqua {
+      background-color: #186563; }
+    .bt-select-query .select .search-item.selected .select-list-item.c-cyan, .bt-select-query .select .search-item.selected .select-list-item.internal {
+      background-color: #1e4b68; }
+    .bt-select-query .select .search-item.selected .select-list-item.c-orange {
+      background-color: #583721; }
+    .bt-select-query .select .search-item.selected .select-list-item.c-lightgreen {
+      background-color: #3d4f27; }
+    .bt-select-query .select .search-item.selected .select-list-item.private, .bt-select-query .select .search-item.selected .select-list-item.c-green {
+      background-color: #244f2a; }
+    .bt-select-query .select .search-item.selected .select-list-item.c-pink {
+      background-color: #552c3d; }
+    .bt-select-query .select .search-item.selected .select-list-item.c-violet {
+      background-color: #4b3a6a; }
+    .bt-select-query .select .search-item.selected .select-list-item.team {
+      background-color: #605234; }
   .bt-select-query .select .selected-item.c-orange {
     background-color: #c66120; }
   .bt-select-query .select .selected-item.c-lightgreen {
     background-color: #638839; }
+  .bt-select-query .select .selected-item.c-pink {
+    background-color: #a44d67; }
   .bt-comment-service-text,
   .bt-issue-tags .bt-status,
   .bt-issue-tags .bt-tag,
@@ -156,6 +199,19 @@
   .bt-card-action .bt-status {
     color: #7f92a4;
     background-color: #1c252f; }
+    .bt-comment-service-text.c-aqua,
+    .bt-issue-tags .bt-status.c-aqua,
+    .bt-issue-tags .bt-tag.c-aqua,
+    .bt-subscription-tags .bt-status.c-aqua,
+    .bt-card-action .bt-status.c-aqua {
+      color: #2fffeb;
+      background-color: #103639; }
+      .bt-comment-service-text.c-aqua.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.c-aqua.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.c-aqua.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.c-aqua.bt-dropdown .dd use,
+      .bt-card-action .bt-status.c-aqua.bt-dropdown .dd use {
+        fill: #2fffeb; }
     .bt-comment-service-text.c-cyan, .bt-comment-service-text.internal,
     .bt-issue-tags .bt-status.c-cyan,
     .bt-issue-tags .bt-status.internal,
@@ -167,6 +223,16 @@
     .bt-card-action .bt-status.internal {
       color: #42b5f9;
       background-color: #132a3b; }
+      .bt-comment-service-text.c-cyan.bt-dropdown .dd use, .bt-comment-service-text.internal.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.c-cyan.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.internal.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.c-cyan.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.internal.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.c-cyan.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.internal.bt-dropdown .dd use,
+      .bt-card-action .bt-status.c-cyan.bt-dropdown .dd use,
+      .bt-card-action .bt-status.internal.bt-dropdown .dd use {
+        fill: #42b5f9; }
     .bt-comment-service-text.c-orange,
     .bt-issue-tags .bt-status.c-orange,
     .bt-issue-tags .bt-tag.c-orange,
@@ -174,6 +240,12 @@
     .bt-card-action .bt-status.c-orange {
       color: #e67d2f;
       background-color: #2c221d; }
+      .bt-comment-service-text.c-orange.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.c-orange.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.c-orange.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.c-orange.bt-dropdown .dd use,
+      .bt-card-action .bt-status.c-orange.bt-dropdown .dd use {
+        fill: #e67d2f; }
     .bt-comment-service-text.c-lightgreen,
     .bt-issue-tags .bt-status.c-lightgreen,
     .bt-issue-tags .bt-tag.c-lightgreen,
@@ -181,6 +253,12 @@
     .bt-card-action .bt-status.c-lightgreen {
       color: #9abf40;
       background-color: #202c20; }
+      .bt-comment-service-text.c-lightgreen.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.c-lightgreen.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.c-lightgreen.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.c-lightgreen.bt-dropdown .dd use,
+      .bt-card-action .bt-status.c-lightgreen.bt-dropdown .dd use {
+        fill: #9abf40; }
     .bt-comment-service-text.private, .bt-comment-service-text.c-green,
     .bt-issue-tags .bt-status.private,
     .bt-issue-tags .bt-status.c-green,
@@ -192,6 +270,68 @@
     .bt-card-action .bt-status.c-green {
       color: #53c147;
       background-color: #162c21; }
+      .bt-comment-service-text.private.bt-dropdown .dd use, .bt-comment-service-text.c-green.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.private.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.c-green.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.private.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.c-green.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.private.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.c-green.bt-dropdown .dd use,
+      .bt-card-action .bt-status.private.bt-dropdown .dd use,
+      .bt-card-action .bt-status.c-green.bt-dropdown .dd use {
+        fill: #53c147; }
+    .bt-comment-service-text.c-pink,
+    .bt-issue-tags .bt-status.c-pink,
+    .bt-issue-tags .bt-tag.c-pink,
+    .bt-subscription-tags .bt-status.c-pink,
+    .bt-card-action .bt-status.c-pink {
+      color: #dd5b7f;
+      background-color: #2b1d29; }
+      .bt-comment-service-text.c-pink.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.c-pink.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.c-pink.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.c-pink.bt-dropdown .dd use,
+      .bt-card-action .bt-status.c-pink.bt-dropdown .dd use {
+        fill: #dd5b7f; }
+    .bt-comment-service-text.c-blue,
+    .bt-issue-tags .bt-status.c-blue,
+    .bt-issue-tags .bt-tag.c-blue,
+    .bt-subscription-tags .bt-status.c-blue,
+    .bt-card-action .bt-status.c-blue {
+      color: #568eff;
+      background-color: #16253c; }
+      .bt-comment-service-text.c-blue.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.c-blue.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.c-blue.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.c-blue.bt-dropdown .dd use,
+      .bt-card-action .bt-status.c-blue.bt-dropdown .dd use {
+        fill: #568eff; }
+    .bt-comment-service-text.c-violet,
+    .bt-issue-tags .bt-status.c-violet,
+    .bt-issue-tags .bt-tag.c-violet,
+    .bt-subscription-tags .bt-status.c-violet,
+    .bt-card-action .bt-status.c-violet {
+      color: #c285ff;
+      background-color: #26233c; }
+      .bt-comment-service-text.c-violet.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.c-violet.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.c-violet.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.c-violet.bt-dropdown .dd use,
+      .bt-card-action .bt-status.c-violet.bt-dropdown .dd use {
+        fill: #c285ff; }
+    .bt-comment-service-text.team,
+    .bt-issue-tags .bt-status.team,
+    .bt-issue-tags .bt-tag.team,
+    .bt-subscription-tags .bt-status.team,
+    .bt-card-action .bt-status.team {
+      color: #ffc964;
+      background-color: #302d25; }
+      .bt-comment-service-text.team.bt-dropdown .dd use,
+      .bt-issue-tags .bt-status.team.bt-dropdown .dd use,
+      .bt-issue-tags .bt-tag.team.bt-dropdown .dd use,
+      .bt-subscription-tags .bt-status.team.bt-dropdown .dd use,
+      .bt-card-action .bt-status.team.bt-dropdown .dd use {
+        fill: #ffc964; }
     .bt-comment-service-text .select-list-item,
     .bt-issue-tags .bt-status .select-list-item,
     .bt-issue-tags .bt-tag .select-list-item,
@@ -199,6 +339,19 @@
     .bt-card-action .bt-status .select-list-item {
       color: #7f92a4;
       background-color: #1c252f; }
+      .bt-comment-service-text .select-list-item.c-aqua,
+      .bt-issue-tags .bt-status .select-list-item.c-aqua,
+      .bt-issue-tags .bt-tag .select-list-item.c-aqua,
+      .bt-subscription-tags .bt-status .select-list-item.c-aqua,
+      .bt-card-action .bt-status .select-list-item.c-aqua {
+        color: #2fffeb;
+        background-color: #103639; }
+        .bt-comment-service-text .select-list-item.c-aqua.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.c-aqua.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.c-aqua.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.c-aqua.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.c-aqua.bt-dropdown .dd use {
+          fill: #2fffeb; }
       .bt-comment-service-text .select-list-item.c-cyan, .bt-comment-service-text .select-list-item.internal,
       .bt-issue-tags .bt-status .select-list-item.c-cyan,
       .bt-issue-tags .bt-status .select-list-item.internal,
@@ -210,6 +363,16 @@
       .bt-card-action .bt-status .select-list-item.internal {
         color: #42b5f9;
         background-color: #132a3b; }
+        .bt-comment-service-text .select-list-item.c-cyan.bt-dropdown .dd use, .bt-comment-service-text .select-list-item.internal.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.c-cyan.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.internal.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.c-cyan.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.internal.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.c-cyan.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.internal.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.c-cyan.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.internal.bt-dropdown .dd use {
+          fill: #42b5f9; }
       .bt-comment-service-text .select-list-item.c-orange,
       .bt-issue-tags .bt-status .select-list-item.c-orange,
       .bt-issue-tags .bt-tag .select-list-item.c-orange,
@@ -217,6 +380,12 @@
       .bt-card-action .bt-status .select-list-item.c-orange {
         color: #e67d2f;
         background-color: #2c221d; }
+        .bt-comment-service-text .select-list-item.c-orange.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.c-orange.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.c-orange.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.c-orange.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.c-orange.bt-dropdown .dd use {
+          fill: #e67d2f; }
       .bt-comment-service-text .select-list-item.c-lightgreen,
       .bt-issue-tags .bt-status .select-list-item.c-lightgreen,
       .bt-issue-tags .bt-tag .select-list-item.c-lightgreen,
@@ -224,6 +393,12 @@
       .bt-card-action .bt-status .select-list-item.c-lightgreen {
         color: #9abf40;
         background-color: #202c20; }
+        .bt-comment-service-text .select-list-item.c-lightgreen.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.c-lightgreen.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.c-lightgreen.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.c-lightgreen.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.c-lightgreen.bt-dropdown .dd use {
+          fill: #9abf40; }
       .bt-comment-service-text .select-list-item.private, .bt-comment-service-text .select-list-item.c-green,
       .bt-issue-tags .bt-status .select-list-item.private,
       .bt-issue-tags .bt-status .select-list-item.c-green,
@@ -235,6 +410,68 @@
       .bt-card-action .bt-status .select-list-item.c-green {
         color: #53c147;
         background-color: #162c21; }
+        .bt-comment-service-text .select-list-item.private.bt-dropdown .dd use, .bt-comment-service-text .select-list-item.c-green.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.private.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.c-green.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.private.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.c-green.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.private.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.c-green.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.private.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.c-green.bt-dropdown .dd use {
+          fill: #53c147; }
+      .bt-comment-service-text .select-list-item.c-pink,
+      .bt-issue-tags .bt-status .select-list-item.c-pink,
+      .bt-issue-tags .bt-tag .select-list-item.c-pink,
+      .bt-subscription-tags .bt-status .select-list-item.c-pink,
+      .bt-card-action .bt-status .select-list-item.c-pink {
+        color: #dd5b7f;
+        background-color: #2b1d29; }
+        .bt-comment-service-text .select-list-item.c-pink.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.c-pink.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.c-pink.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.c-pink.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.c-pink.bt-dropdown .dd use {
+          fill: #dd5b7f; }
+      .bt-comment-service-text .select-list-item.c-blue,
+      .bt-issue-tags .bt-status .select-list-item.c-blue,
+      .bt-issue-tags .bt-tag .select-list-item.c-blue,
+      .bt-subscription-tags .bt-status .select-list-item.c-blue,
+      .bt-card-action .bt-status .select-list-item.c-blue {
+        color: #568eff;
+        background-color: #16253c; }
+        .bt-comment-service-text .select-list-item.c-blue.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.c-blue.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.c-blue.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.c-blue.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.c-blue.bt-dropdown .dd use {
+          fill: #568eff; }
+      .bt-comment-service-text .select-list-item.c-violet,
+      .bt-issue-tags .bt-status .select-list-item.c-violet,
+      .bt-issue-tags .bt-tag .select-list-item.c-violet,
+      .bt-subscription-tags .bt-status .select-list-item.c-violet,
+      .bt-card-action .bt-status .select-list-item.c-violet {
+        color: #c285ff;
+        background-color: #26233c; }
+        .bt-comment-service-text .select-list-item.c-violet.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.c-violet.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.c-violet.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.c-violet.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.c-violet.bt-dropdown .dd use {
+          fill: #c285ff; }
+      .bt-comment-service-text .select-list-item.team,
+      .bt-issue-tags .bt-status .select-list-item.team,
+      .bt-issue-tags .bt-tag .select-list-item.team,
+      .bt-subscription-tags .bt-status .select-list-item.team,
+      .bt-card-action .bt-status .select-list-item.team {
+        color: #ffc964;
+        background-color: #302d25; }
+        .bt-comment-service-text .select-list-item.team.bt-dropdown .dd use,
+        .bt-issue-tags .bt-status .select-list-item.team.bt-dropdown .dd use,
+        .bt-issue-tags .bt-tag .select-list-item.team.bt-dropdown .dd use,
+        .bt-subscription-tags .bt-status .select-list-item.team.bt-dropdown .dd use,
+        .bt-card-action .bt-status .select-list-item.team.bt-dropdown .dd use {
+          fill: #ffc964; }
   .bt-issue-cover {
     background: #0b121a; }
   .bt-markdown pre,
