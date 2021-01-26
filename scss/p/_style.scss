@@ -232,7 +232,8 @@ $regular: $textlight;
 			fill: $aqua;
 		}
 	}
-	&.c-cyan {
+	&.c-cyan,
+	&.internal {
 		color: $open;
 		background-color: mix($open, $bgdarker, 15%);
 		&.bt-dropdown .dd use {
@@ -253,7 +254,8 @@ $regular: $textlight;
 			fill: $coming;
 		}
 	}
-	&.c-green {
+	&.c-green,
+	&.private {
 		color: $fixed;
 		background-color: mix($fixed, $bgdarker, 15%);
 		&.bt-dropdown .dd use {
@@ -301,7 +303,8 @@ $regular: $textlight;
 			&.c-aqua {
 				background-color: mix($aqua, $bgdarker, 35%);
 			}
-			&.c-cyan {
+			&.c-cyan,
+			&.internal {
 				background-color: mix($open, $bgdarker, 35%);
 			}
 			&.c-orange {
@@ -310,7 +313,8 @@ $regular: $textlight;
 			&.c-lightgreen {
 				background-color: mix($coming, $bgdarker, 35%);
 			}
-			&.c-green {
+			&.c-green,
+			&.private {
 				background-color: mix($fixed, $bgdarker, 35%);
 			}
 			&.c-blue {
