@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Telegram Bugs Dark
-@version      1.0.3
+@version      1.1.0
 @description  A dark theme for bugs.telegram.org
 @namespace    https://github.com/dotvhs/telegram-bugs-dark
 @author       dotvhs
@@ -84,7 +84,6 @@
   .bt-issue-trending .icon use,
   .bt-issue-actions .bt-issue-copy-link .icon use {
     fill: #7f92a4; }
-  .select,
   .bt-main-search-form .select {
     background-color: #242f3d;
     box-shadow: inset 0 0 0 1px #242f3d; }
@@ -199,6 +198,25 @@
     background-color: #638839; }
   .bt-select-query .select .selected-item.c-pink {
     background-color: #a44d67; }
+  .selected-item {
+    color: #7f92a4;
+    background-color: #1c252f; }
+    .selected-item.focused {
+      background-color: #2e3843; }
+      .selected-item.focused .close:before,
+      .selected-item.focused .close:after {
+        background-color: #7f92a4; }
+    .selected-item.team {
+      color: #ffc964;
+      background-color: #302d25; }
+      .selected-item.team.focused {
+        background-color: #544930; }
+      .selected-item.team .close:before,
+      .selected-item.team .close:after {
+        background-color: #ffc964; }
+  .search-item.selected .select-list-item,
+  .search-item:hover .select-list-item {
+    background: #242f3d; }
   .bt-card-type.internal {
     background-color: transparent; }
   .bt-card-type.private {

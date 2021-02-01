@@ -140,7 +140,6 @@ a.bt-comment-reply-content {
 	fill: $textlight;
 }
 
-.select,
 .bt-main-search-form .select {
 	background-color: $bglight;
 	box-shadow: inset 0 0 0 1px $bglight;
@@ -345,6 +344,34 @@ $regular: $textlight;
 	&.c-pink {
 		background-color: #a44d67;
 	}
+}
+
+.selected-item {
+	color: $regular;
+	background-color: mix($regular, $bgdarker, 15%);
+	&.focused {
+		background-color: mix($regular, $bgdarker, 30%);
+		.close:before,
+		.close:after {
+			background-color: $regular;
+		}
+	}
+	&.team {
+		color: $team;
+		background-color: mix($team, $bgdarker, 15%);
+		&.focused {
+			background-color: mix($team, $bgdarker, 30%);
+		}
+		.close:before,
+		.close:after {
+			background-color: $team;
+		}
+	}
+}
+
+.search-item.selected .select-list-item,
+.search-item:hover .select-list-item {
+	background: $bglight;
 }
 
 .bt-card-type.internal {
