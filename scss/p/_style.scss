@@ -155,8 +155,10 @@ textarea.cd-form-control,
 	border-color: $bglight;
 }
 
+.select,
 .select .items-list {
-	background: $bgdarker;
+	background-color: $bgdark;
+	box-shadow: inset 0 0 0 1px $bgdarker;
 }
 
 .bt-comments-more {
@@ -216,11 +218,11 @@ $team: #ffc964;
 $pink: #dd5b7f;
 $violet: #c285ff;
 $blue: #789aff;
-$regular: $textlight;
+$regular: #6586a6;
 
 @mixin pill-regular {
 	color: $regular;
-	background-color: mix($regular, $bgdarker, 15%);
+	background-color: #1a2737;
 }
 
 @mixin pill-colors {
