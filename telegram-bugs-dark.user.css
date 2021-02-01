@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Telegram Bugs Dark
-@version      1.1.0
+@version      1.2.0
 @description  A dark theme for bugs.telegram.org
 @namespace    https://github.com/dotvhs/telegram-bugs-dark
 @author       dotvhs
@@ -93,8 +93,10 @@
     box-shadow: inset 0 -1px 0 #242f3d; }
   .cd-comment-input-wrap .input.cd-comment-input {
     border-color: #242f3d; }
+  .select,
   .select .items-list {
-    background: #0b121a; }
+    background-color: #0e1621;
+    box-shadow: inset 0 0 0 1px #0b121a; }
   .bt-comments-more {
     background-color: #17212b;
     color: #7f92a4; }
@@ -125,8 +127,8 @@
     background-color: #242f3d;
     color: #e3e4e6; }
   .bt-select-query .select .search-item .select-list-item {
-    color: #7f92a4;
-    background-color: #1c252f; }
+    color: #6586a6;
+    background-color: #1a2737; }
     .bt-select-query .select .search-item .select-list-item.c-aqua {
       color: #2fffeb;
       background-color: #103639; }
@@ -173,7 +175,7 @@
       .bt-select-query .select .search-item .select-list-item.team.bt-dropdown .dd use {
         fill: #ffc964; }
   .bt-select-query .select .search-item.selected .select-list-item {
-    background-color: #2e3843; }
+    background-color: #263544; }
     .bt-select-query .select .search-item.selected .select-list-item.c-aqua {
       background-color: #186563; }
     .bt-select-query .select .search-item.selected .select-list-item.c-cyan, .bt-select-query .select .search-item.selected .select-list-item.internal {
@@ -199,13 +201,13 @@
   .bt-select-query .select .selected-item.c-pink {
     background-color: #a44d67; }
   .selected-item {
-    color: #7f92a4;
-    background-color: #1c252f; }
+    color: #6586a6;
+    background-color: #19232f; }
     .selected-item.focused {
-      background-color: #2e3843; }
+      background-color: #263544; }
       .selected-item.focused .close:before,
       .selected-item.focused .close:after {
-        background-color: #7f92a4; }
+        background-color: #6586a6; }
     .selected-item.team {
       color: #ffc964;
       background-color: #302d25; }
@@ -226,8 +228,8 @@
   .bt-issue-tags .bt-tag,
   .bt-subscription-tags .bt-status,
   .bt-card-action .bt-status {
-    color: #7f92a4;
-    background-color: #1c252f; }
+    color: #6586a6;
+    background-color: #1a2737; }
     .bt-comment-service-text.c-aqua,
     .bt-issue-tags .bt-status.c-aqua,
     .bt-issue-tags .bt-tag.c-aqua,
@@ -366,8 +368,8 @@
     .bt-issue-tags .bt-tag .select-list-item,
     .bt-subscription-tags .bt-status .select-list-item,
     .bt-card-action .bt-status .select-list-item {
-      color: #7f92a4;
-      background-color: #1c252f; }
+      color: #6586a6;
+      background-color: #1a2737; }
       .bt-comment-service-text .select-list-item.c-aqua,
       .bt-issue-tags .bt-status .select-list-item.c-aqua,
       .bt-issue-tags .bt-tag .select-list-item.c-aqua,
@@ -503,8 +505,8 @@
           fill: #ffc964; }
   .bt-status,
   .bt-tag {
-    color: #7f92a4;
-    background-color: #1c252f; }
+    color: #6586a6;
+    background-color: #1a2737; }
     .bt-status.c-aqua,
     .bt-tag.c-aqua {
       color: #2fffeb;
