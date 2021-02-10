@@ -155,10 +155,13 @@ textarea.cd-form-control,
 	border-color: $bglight;
 }
 
-.select,
-.select .items-list {
+.select {
 	background-color: $bgdark;
-	box-shadow: inset 0 0 0 1px $bgdarker;
+	box-shadow: inset 0 -1px 0 $bglight;
+	.items-list {
+		background-color: $bgdarker;
+		box-shadow: inset 0 0 0 1px $bgdarker;
+	}
 }
 
 .bt-comments-more {

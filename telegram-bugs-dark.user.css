@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Telegram Bugs Dark
-@version      1.2.0
+@version      1.2.1
 @description  A dark theme for bugs.telegram.org
 @namespace    https://github.com/dotvhs/telegram-bugs-dark
 @author       dotvhs
@@ -93,10 +93,12 @@
     box-shadow: inset 0 -1px 0 #242f3d; }
   .cd-comment-input-wrap .input.cd-comment-input {
     border-color: #242f3d; }
-  .select,
-  .select .items-list {
+  .select {
     background-color: #0e1621;
-    box-shadow: inset 0 0 0 1px #0b121a; }
+    box-shadow: inset 0 -1px 0 #242f3d; }
+    .select .items-list {
+      background-color: #0b121a;
+      box-shadow: inset 0 0 0 1px #0b121a; }
   .bt-comments-more {
     background-color: #17212b;
     color: #7f92a4; }
